@@ -138,6 +138,8 @@ public class EventHandler implements RequestHandler<ScheduledEvent, String> {
             //Add to list of processed files
             filesProcessed.add(new KeyVersion(summary.getKey()));
             logger.log("logging Contents of the file" + fileContents);
+			
+			
         }
         return filesProcessed;
     }
@@ -153,6 +155,9 @@ public class EventHandler implements RequestHandler<ScheduledEvent, String> {
     
     private boolean isValidFile(String fileContents) {
         if (!fileContents.contains("\n")) {
+			
+			
+			
             return false;
         }
         String[] lines = fileContents.split("\n");
